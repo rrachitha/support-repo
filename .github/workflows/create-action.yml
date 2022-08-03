@@ -1,0 +1,24 @@
+name: Repository Dispatch trigger
+on:
+  repository_dispatch:
+    types: create_gh_action
+
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.client_payload.ref }}
+      - name: Create deploy action
+        id: gh-action
+        uses: rrachitha/custom-create-action@v1.0.0
+        with:
+          userName: 'rrachitha'
+          pacToken: ${{ secrets.PAC_TOKEN }}
+          repoName: 'support-repo'
+          AZURE_FUNCTIONAPP_NAME: 'function-app'
+          AZURE_FUNCTIONAPP_PACKAGE_PATH: './path'
+          DOTNET_VERSION: '1.0.0'
+
+
