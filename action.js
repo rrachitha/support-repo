@@ -21,7 +21,8 @@ let data = {
     on: 'create',
     env: {AZURE_FUNCTIONAPP_NAME: 'function-app-adp-v2-dev', AZURE_FUNCTIONAPP_PACKAGE_PATH: './ImageResizeFunction', DOTNET_VERSION: '3.1.x'},
     permissions: {
-        'id-token': 'write'
+        'id-token': 'write',
+        content: 'read'
     },
     jobs: {
         'build-deploy': {
