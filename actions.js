@@ -59,7 +59,7 @@ let data = {
 let yamlStr = yaml.dump(data);
 fs.writeFileSync('.github/workflows/deploy.yaml', yamlStr, 'utf8');
 
-
+// $%%%
 // TODO: Authenticate to Github
 
 
