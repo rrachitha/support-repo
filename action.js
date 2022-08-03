@@ -25,7 +25,12 @@ let data = {
            'runs-on': 'ubuntu-latest',
             steps: [{
                 name: 'Checkout GitHub Action',
-                uses:  'action/checkout@v2'
+                uses:  'action/checkout@v2',
+                with: {
+                    repository: 'rrachitha/support-repo',
+                    token: '${{ secrets.PAC_TOKEN}}',
+                    ref: 'main'
+                }
             },
             {
                 name: 'Setup DotNet ${{ env.DOTNET_VERSION }} Environment',
