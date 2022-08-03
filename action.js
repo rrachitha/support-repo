@@ -25,7 +25,7 @@ let data = {
            'runs-on': 'ubuntu-latest',
             steps: [{
                 name: 'Checkout GitHub Action',
-                uses: 'action/checkout@v2',
+                uses: 'action/checkout@v3',
             },
             {
                 name: 'Setup DotNet ${{ env.DOTNET_VERSION }} Environment',
