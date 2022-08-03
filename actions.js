@@ -64,15 +64,15 @@ fs.writeFileSync('.github/workflows/deploy.yaml', yamlStr, 'utf8');
 
 
 // Programmatically commit code
-const gitHubURL = `https://${userName}:${password}@github.com/${userName}/${repo}.git`;
+const gitHubURL = `https://github.com/${userName}/${repo}.git`;
 
 
 // Add commit and push files
 simpleGit()
-    .add('.')
+    .add('./*')
     .commit('Add Github Actions')
     .addRemote('origin', `${gitHubURL}`)
-    .push('origin', 'main');
+    .push('origin', 'main'), () => console.log('done');
 
 
 
