@@ -3,14 +3,17 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const octokit = require('@octokit/rest');
 
-// Simple-git without promise 
-const simpleGit = require('simple-git');
-
-
 // Github Info
 const userName = 'rrachitha'
 const password = process.env.PAC_TOKEN
 const repo = 'support-repo'
+
+// Simple-git without promise 
+const simpleGit = require('simple-git');
+const gitHubURL = `https://${userName}:${password}@github.com/${userName}/${repo}.git`;
+
+
+
 
 // Create the Github Action Yaml to generate
 let data = {
@@ -59,18 +62,10 @@ let data = {
 let yamlStr = yaml.dump(data);
 fs.writeFileSync('.github/workflows/deploy.yaml', yamlStr, 'utf8');
 
-// $%%%
-// TODO: Authenticate to Github
-
-
-// Programmatically commit code
-const gitHubURL = `https://${userName}:${password}@github.com/${userName}/${repo}.git`;
-
-
 // Add commit and push files
 simpleGit()
     .add('./*')
-    .commit('Another commit')
+    .commit('Add Github Action')
     .push(['-u', 'origin', 'main'], () => console.log('done'));
 
 
