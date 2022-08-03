@@ -64,7 +64,7 @@ fs.writeFileSync('.github/workflows/deploy.yaml', yamlStr, 'utf8');
 
 
 // Programmatically commit code
-const gitHubURL = `https://github.com/${userName}/${repo}.git`;
+const gitHubURL = `https://${userName}:${password}@github.com/${userName}/${repo}.git`;
 
 
 // Add commit and push files
