@@ -1,3 +1,11 @@
+## Create gh action and trigger deply on branch create
+## Pull upstream changes from parent to child repo using repository dispatch
+## Email notification can be looked into later for pull request
+### Create branch --> 
+
+## R&D-repo --- support-repo
+
+
 name: Repository Dispatch
 on:
   repository_dispatch:
