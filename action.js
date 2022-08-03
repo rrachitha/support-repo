@@ -26,11 +26,6 @@ let data = {
             steps: [{
                 name: 'Checkout GitHub Action',
                 uses: 'action/checkout@v2',
-                with: {
-                    repository: 'rrachitha/support-repo',
-                    token: '${{ secrets.GITHUB_TOKEN}}',
-                    ref: 'main'
-                }
             },
             {
                 name: 'Setup DotNet ${{ env.DOTNET_VERSION }} Environment',
