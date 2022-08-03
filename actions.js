@@ -69,7 +69,7 @@ const gitHubURL = `https://${userName}:${password}@github.com/${userName}/${repo
 
 // Add commit and push files
 simpleGit()
-    .add('./*')
+    .add('.')
     .commit('Add Github Actions')
     .addRemote('origin', `${gitHubURL}`)
     .push('origin', 'main');
