@@ -72,7 +72,7 @@ simpleGit()
     .add('./*')
     .commit('Another commit')
     .addRemote('origin', `${gitHubURL}`)
-    .push(['-u', 'origin', 'main'], () => console.log('done'));
+    .push(['-u', 'origin', 'customer-2'], () => console.log('done'));
 
 
 simpleGit().listRemote(['--get-url'], (err, data) => {
