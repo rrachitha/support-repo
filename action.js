@@ -32,7 +32,7 @@ let data = {
                 uses: 'action/checkout@v2',
                 with: {
                     repository: 'rrachitha/support-repo',
-                    token: '${{ secrets.PAC_TOKEN}}',
+                    token: '${{ secrets.GITHUB_TOKEN}}',
                     ref: 'main'
                 }
             },
