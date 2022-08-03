@@ -25,7 +25,7 @@ let data = {
            'runs-on': 'ubuntu-latest',
             steps: [{
                 name: 'Checkout GitHub Action',
-                uses: 'action/checkout@v3',
+                uses: 'actions/checkout@v3',
             },
             {
                 name: 'Setup DotNet ${{ env.DOTNET_VERSION }} Environment',
@@ -56,7 +56,7 @@ let data = {
 };
 
 let yamlStr = yaml.dump(data);
-fs.writeFileSync('.github/workflows/deploy.yaml', yamlStr, 'utf8');
+fs.writeFileSync('.github/workflows/deploy.yml', yamlStr, 'utf8');
 
 // Add commit and push files
 simpleGit()
