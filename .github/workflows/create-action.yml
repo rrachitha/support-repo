@@ -15,7 +15,7 @@ jobs:
           userName: 'rrachitha'
           pacToken: ${{ secrets.PAC_TOKEN }}
           repoName: 'support-repo'
-          branchName: 'prod'
+          branchName: 'test'
           AZURE_FUNCTIONAPP_NAME: 'function-app'
           AZURE_FUNCTIONAPP_PACKAGE_PATH: './path'
           DOTNET_VERSION: '1.0.0'
