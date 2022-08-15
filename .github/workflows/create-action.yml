@@ -1,6 +1,12 @@
 name: Create action
+
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        required: true
+        type: string
+
 
 jobs:
   myEvent:
@@ -15,7 +21,7 @@ jobs:
           userName: 'rrachitha'
           pacToken: ${{ secrets.PAC_TOKEN }}
           repoName: 'support-repo'
-          branchName: 'test'
+          branchName: ${{ github.event.inputs.branch }}
           AZURE_FUNCTIONAPP_NAME: 'function-app'
           AZURE_FUNCTIONAPP_PACKAGE_PATH: './path'
           DOTNET_VERSION: '1.0.0'
