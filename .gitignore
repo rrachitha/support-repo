@@ -39,7 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+
 
 # Gatsby files
 .cache/
@@ -98,7 +98,7 @@ dist
 # public
 
 # vuepress build output
-.vuepress/dist
+
 
 # vuepress v2.x temp and cache directory
 .temp
